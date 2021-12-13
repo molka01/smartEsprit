@@ -129,10 +129,10 @@ GtkWidget *dd,*type,*plat,*ing,*date,*ty,*se,*da,*po;
 	gtk_label_set_text(GTK_LABEL(da),A.ing);
 	gtk_entry_set_text(GTK_LABEL(po),A.date);
 			
-                gtk_notebook_prev_page(GTK_NOTEBOOK(lookup_widget(objet,"notebookMolka")));//redirection vers la page precedente
+                gtk_notebook_prev_page(GTK_NOTEBOOK(lookup_widget(objet,"notebookMolka")));
 }
 
-//mise a jour treeview
+
 afficher_nb(p ,"menu.txt");
 
 }
@@ -141,7 +141,7 @@ afficher_nb(p ,"menu.txt");
 
 
 
-////////////////////////  RECHERCHE   ////////////////////////////
+
 void
 on_rech_mo_clicked                     (GtkWidget      *button,
                                         gpointer         user_data)
@@ -469,7 +469,7 @@ gtk_label_set_text(GTK_LABEL(lb),"l'id n'existe pas ");
 }
 
 
-//mise a jour treeview
+
  GtkWidget* p=lookup_widget(objet_graphique,"treeviewMolka");
 afficher_nb(p ,"menu.txt");
 }
@@ -503,7 +503,7 @@ void
 on_checkbutton2MO_toggled                (GtkToggleButton *togglebutton,
                                         gpointer         user_data)
 {
-   if (gtk_toggle_button_get_active(togglebutton)) //gp A
+   if (gtk_toggle_button_get_active(togglebutton)) 
 
    {t[1]=1;}    
 }
@@ -513,7 +513,7 @@ void
 on_checkbutton1MO_toggled                (GtkToggleButton *togglebutton,
                                         gpointer         user_data)
 {
-  if (gtk_toggle_button_get_active(togglebutton)) //gp B
+  if (gtk_toggle_button_get_active(togglebutton)) 
   {t[0]=1;}   
 }
 
@@ -571,10 +571,10 @@ system("firefox https://www.instagram.com/");
 
 
 void
-on_checkbutton4MO_toggled                (GtkToggleButton *togglebutton,//groupeB
+on_checkbutton4MO_toggled                (GtkToggleButton *togglebutton,
                                         gpointer         user_data)
 {
-   if (gtk_toggle_button_get_active(togglebutton)) //gp A
+   if (gtk_toggle_button_get_active(togglebutton))
 
    {t1[0]=1;} 
 else 
@@ -583,10 +583,10 @@ else
 
 
 void
-on_checkbutton3MO_toggled                (GtkToggleButton *togglebutton,//groupeA
+on_checkbutton3MO_toggled                (GtkToggleButton *togglebutton,
                                         gpointer         user_data)
 {
-   if (gtk_toggle_button_get_active(togglebutton)) //gp A
+   if (gtk_toggle_button_get_active(togglebutton)) 
 
    {t1[1]=1;} 
 else 
@@ -598,7 +598,7 @@ void
 on_radiobutton4MO_toggled                (GtkToggleButton *togglebutton,
                                         gpointer         user_data)
 {
- if (gtk_toggle_button_get_active(GTK_RADIO_BUTTON (togglebutton))) //mode nuit
+ if (gtk_toggle_button_get_active(GTK_RADIO_BUTTON (togglebutton))) 
 {x1=2;} 
 else 
 {x1=0;} 
@@ -606,7 +606,7 @@ else
 }
 
 void
-on_radiobutton3MO_toggled                (GtkToggleButton *togglebutton,//mode jour
+on_radiobutton3MO_toggled                (GtkToggleButton *togglebutton,
                                         gpointer         user_data)
 {
  if (gtk_toggle_button_get_active(GTK_RADIO_BUTTON (togglebutton)))
