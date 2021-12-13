@@ -1,0 +1,4 @@
+knn3 aa a Diner a 1
+78i9 test2 test Déjeuner test 1 
+ztlf a a Petit_déjeuner a 3 
+afrc a a déjeuner a 1

@@ -1,0 +1,8 @@
+prog:fon.o main.o
+	gcc fon.o main.o -o prog
+main.o:main.c
+	gcc-c main.c
+fon.o:fon.c
+	gcc-c fon.c
+
+ 
