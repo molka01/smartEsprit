@@ -89,7 +89,7 @@ F = fopen ("menu.txt", "r");
 }
 
 
-///////////////  MODIFICATION   /////////////////
+
 void modi_nb(char id [] , nutri U) 
 {
    FILE *F, *FW;
@@ -121,7 +121,7 @@ rename("tr.txt", "menu.txt");
 
 }
 
-//////////////////   AFFICHER    ///////////////////
+
 void afficher_nb (GtkWidget *treeviewMolka, char*l )
 
 {
@@ -140,7 +140,6 @@ FILE *f;
 	char groupetr[30];
 	char modetr [30];
 
-        /* Creation du modele de type liste*/
         adstore = gtk_list_store_new(8,
                                      G_TYPE_STRING,
                                      G_TYPE_STRING,
@@ -150,7 +149,6 @@ FILE *f;
                                      G_TYPE_STRING,
                                      G_TYPE_STRING,
                                      G_TYPE_STRING);
-        /* Insertion des elements */
         f=fopen(l,"r");
 while(fscanf(f,"%s %s %s %s %s %s %s %s\n",id,type,plat,ing,date,nb,groupetr ,modetr)!= EOF)
         {
@@ -171,7 +169,6 @@ while(fscanf(f,"%s %s %s %s %s %s %s %s\n",id,type,plat,ing,date,nb,groupetr ,mo
                             -1);}
         fclose(f);
 
-	/* Creation de la 1ere colonne */
 if(o==0)
 	{cellad = gtk_cell_renderer_text_new();
         adcolumn = gtk_tree_view_column_new_with_attributes("ID",
@@ -180,78 +177,63 @@ if(o==0)
                                                             NULL);
 
 
-        /* Ajouter la 1er colonne à la vue */
 	gtk_tree_view_append_column(GTK_TREE_VIEW(treeviewMolka), adcolumn);
 
 
-	/* Creation de la 2eme colonne */
         cellad = gtk_cell_renderer_text_new();
         adcolumn = gtk_tree_view_column_new_with_attributes("Chef",
                                                             cellad,
                                                             "text", 1,
                                                             NULL);
-	/* Ajouter la 2emme colonne à la vue */
 	gtk_tree_view_append_column(GTK_TREE_VIEW(treeviewMolka), adcolumn);
 
 
 
 
-	/* Creation de la 4eme colonne */
         cellad = gtk_cell_renderer_text_new();
         adcolumn = gtk_tree_view_column_new_with_attributes("Ingrédient",
                                                             cellad,
                                                             "text", 2,
                                                             NULL);
-	/* Ajouter la 4emme colonne à la vue */
 	gtk_tree_view_append_column(GTK_TREE_VIEW(treeviewMolka), adcolumn);
 
-	/* Creation de la 5eme colonne */
         cellad = gtk_cell_renderer_text_new();
         adcolumn = gtk_tree_view_column_new_with_attributes("Plat",
                                                             cellad,
                                                             "text", 3,
                                                             NULL);
-	/* Ajouter la 5emme colonne à la vue */
 	gtk_tree_view_append_column(GTK_TREE_VIEW(treeviewMolka), adcolumn);
 
 
-        /* Creation de la 5eme colonne */
         cellad = gtk_cell_renderer_text_new();
         adcolumn = gtk_tree_view_column_new_with_attributes("SEMAINE",
                                                             cellad,
                                                             "text", 4,
                                                             NULL);
-	/* Ajouter la 5emme colonne à la vue */
 	gtk_tree_view_append_column(GTK_TREE_VIEW(treeviewMolka), adcolumn);
 
-	/* Creation de la 3eme colonne */
         cellad = gtk_cell_renderer_text_new();
         adcolumn = gtk_tree_view_column_new_with_attributes("Déchet",
                                                             cellad,
                                                             "text", 5,
                                                             NULL);
 
-	/* Ajouter la 3emme colonne à la vue */
 	gtk_tree_view_append_column(GTK_TREE_VIEW(treeviewMolka), adcolumn);
 
-	/* Creation de la 3eme colonne */
         cellad = gtk_cell_renderer_text_new();
         adcolumn = gtk_tree_view_column_new_with_attributes("Groupe",
                                                             cellad,
                                                             "text", 6,
                                                             NULL);
 
-	/* Ajouter la 3emme colonne à la vue */
 	gtk_tree_view_append_column(GTK_TREE_VIEW(treeviewMolka), adcolumn);
 
-	/* Creation de la 3eme colonne */
         cellad = gtk_cell_renderer_text_new();
         adcolumn = gtk_tree_view_column_new_with_attributes("Mode",
                                                             cellad,
                                                             "text", 7,
                                                             NULL);
 
-	/* Ajouter la 3emme colonne à la vue */
 	gtk_tree_view_append_column(GTK_TREE_VIEW(treeviewMolka), adcolumn);
 
 
